@@ -17,7 +17,7 @@ print(aaron_judge.description.unique())
 print(aaron_judge.type.unique())
 
 # Task 4
-aaron_judge['type'] = aaron_judge['type'].map({'S': 1, 'B': 2})
+aaron_judge['type'] = aaron_judge['type'].map({'S': 1, 'B': 0})
 
 # Task 5
 print(aaron_judge['type'])
@@ -25,3 +25,5 @@ print(aaron_judge['type'])
 # Task 6
 print(aaron_judge['plate_x'])
 
+# Task 7
+aaron_judge = aaron_judge.dropna(subset = ['type', 'plate_x', 'plate_z'])
