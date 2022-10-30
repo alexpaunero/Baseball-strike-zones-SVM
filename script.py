@@ -27,3 +27,7 @@ print(aaron_judge['plate_x'])
 
 # Task 7
 aaron_judge = aaron_judge.dropna(subset = ['type', 'plate_x', 'plate_z'])
+
+# Task 8
+plt.scatter(aaron_judge.plate_x, aaron_judge.plate_z, c = aaron_judge.type, cmap = plt.cm.coolwarm, alpha = 0.25)
+plt.show()
