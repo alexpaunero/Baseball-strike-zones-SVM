@@ -31,3 +31,6 @@ aaron_judge = aaron_judge.dropna(subset = ['type', 'plate_x', 'plate_z'])
 # Task 8
 plt.scatter(aaron_judge.plate_x, aaron_judge.plate_z, c = aaron_judge.type, cmap = plt.cm.coolwarm, alpha = 0.25)
 plt.show()
+
+# Task 9
+training_set, validation_set = train_test_split(aaron_judge, random_state = 1)
