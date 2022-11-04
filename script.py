@@ -34,3 +34,6 @@ plt.show()
 
 # Task 9
 training_set, validation_set = train_test_split(aaron_judge, random_state = 1)
+
+# Task 10
+classifier = SVM(kernel='rbf')
