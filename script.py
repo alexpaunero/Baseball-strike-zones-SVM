@@ -37,3 +37,9 @@ training_set, validation_set = train_test_split(aaron_judge, random_state = 1)
 
 # Task 10
 classifier = SVM(kernel='rbf')
+
+# Task 11
+classifier.fit(training_set[['plate_x','plate_z']], training_set.type)
+
+# Task 12
+draw_boundary(ax, classifier)
