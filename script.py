@@ -43,3 +43,6 @@ classifier.fit(training_set[['plate_x','plate_z']], training_set.type)
 
 # Task 12
 draw_boundary(ax, classifier)
+
+# Task 13
+print(classifier.score(validation_set[['plate_x', 'plate_z']], validation_set.type))
