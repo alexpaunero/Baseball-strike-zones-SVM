@@ -35,8 +35,8 @@ plt.show()
 # Task 9
 training_set, validation_set = train_test_split(aaron_judge, random_state = 1)
 
-# Task 10
-classifier = SVM(kernel='rbf')
+# Task 10 and 14
+classifier = SVC(kernel='rbf', gamma = 100, C = 100)
 
 # Task 11
 classifier.fit(training_set[['plate_x','plate_z']], training_set.type)
