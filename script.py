@@ -62,3 +62,31 @@ for gamma in range(1, 20):
 print(top_score) 
 print(top_gamma) 
 print(top_c) 
+
+# Task 16
+def strikezone(player):
+
+  player['type'] = player['type'].map({'S': 1, 'B': 0})
+
+  print(player['type'])
+
+  print(player['plate_x'])
+
+  player = player.dropna(subset = ['type', 'plate_x', 'plate_z'])
+
+  plt.scatter(player.plate_x, player.plate_z, c = player.type, cmap = plt.cm.coolwarm, alpha = 0.25)
+  plt.show()
+
+  training_set, validation_set = train_test_split(player, random_state = 1)
+
+  classifier = SVC(kernel='rbf', gamma = 1, C = 3)
+
+  classifier.fit(training_set[['plate_x','plate_z']], training_set.type)
+
+  draw_boundary(ax, classifier)
+  ax.set_ylim(-2, 6)
+  ax.set_xlim(-3, 3)
+  plt.show()
+
+strikezone(jose_altuve)
+strikezone(david_ortiz)
