@@ -8,7 +8,7 @@ from players import aaron_judge, jose_altuve, david_ortiz
 fig, ax = plt.subplots()
 
 # Task 1
-#print(aaron_judge.columns)
+print(aaron_judge.columns)
 
 # Task 2
 print(aaron_judge.description.unique())
